@@ -1,4 +1,5 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+// App.jsx
+import { Routes, Route } from "react-router-dom";
 import Tracker from "./pages/Tracker";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
@@ -7,7 +8,7 @@ import Navbar from "./components/Navbar";
 
 function App() {
   return (
-    <BrowserRouter basename="/money-tracker">
+    <>
       <Navbar />
       <Routes>
         <Route path="/tracker" element={<Tracker />} />
@@ -23,7 +24,7 @@ function App() {
           }
         />
       </Routes>
-    </BrowserRouter>
+    </>
   );
 }
 
