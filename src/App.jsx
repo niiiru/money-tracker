@@ -7,7 +7,7 @@ import Navbar from "./components/Navbar";
 
 function App() {
   return (
-    <Router>
+    <BrowserRouter basename="/money-tracker">
       <Navbar />
       <Routes>
         <Route path="/tracker" element={<Tracker />} />
@@ -23,7 +23,7 @@ function App() {
           }
         />
       </Routes>
-    </Router>
+    </BrowserRouter>
   );
 }
 
