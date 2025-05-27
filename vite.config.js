@@ -7,4 +7,10 @@ const repoName = "money-tracker";
 export default defineConfig({
   base: `/${repoName}/`,
   plugins: [react()],
+  build: {
+    outDir: "dist",
+  },
+  server: {
+    historyApiFallback: true,
+  },
 });
