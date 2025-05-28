@@ -18,3 +18,4 @@ python-jose==3.3.0
 pymongo==4.7.1
 motor==3.4.0
 python-multipart==0.0.9
+python-dotenv==1.0.1

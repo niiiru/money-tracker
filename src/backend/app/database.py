@@ -1,10 +1,19 @@
 from motor.motor_asyncio import AsyncIOMotorClient
 from pymongo import ASCENDING
+from dotenv import load_dotenv
 
-# MongoDB connection string (local)
-MONGO_URL = "mongodb://localhost:27017"
+import os
+
+# Load environment variables from .env file
+load_dotenv()
+
+
+# Get MongoDB connection string from environment variable
+MONGO_URL = os.getenv("MONGODB_URL")
 
 # Create the async client and select DB
+print("URL:", MONGO_URL)
+
 client = AsyncIOMotorClient(MONGO_URL)
 db = client.money_tracker
 
