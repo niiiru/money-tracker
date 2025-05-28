@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { NavLink } from "react-router-dom";
 
 function Navbar() {
   const navigate = useNavigate();
@@ -20,10 +21,10 @@ function Navbar() {
     <nav style={navStyle}>
       <ul style={ulStyle}>
         <li>
-          <a href="/tracker">Tracker</a>
+          <NavLink to="/tracker">Tracker</NavLink>
         </li>
         <li>
-          <a href="/advice">Advice</a>
+          <NavLink to="/advice">Advice</NavLink>
         </li>
 
         {isLoggedIn ? (
@@ -33,10 +34,10 @@ function Navbar() {
         ) : (
           <>
             <li>
-              <a href="/login">Login</a>
+              <NavLink to="/login">Login</NavLink>
             </li>
             <li>
-              <a href="/register">Register</a>
+              <NavLink to="/register">Register</NavLink>
             </li>
           </>
         )}
