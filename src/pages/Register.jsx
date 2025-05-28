@@ -12,7 +12,7 @@ function Register() {
 
     try {
       // Register user
-      const res = await fetch("http://localhost:8000/users/register", {
+      const res = await fetch("https://money-tracker-4q08.onrender.com/users/register", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ username, password }),
@@ -25,7 +25,7 @@ function Register() {
       }
 
       // Auto-login after registration
-      const loginRes = await fetch("http://localhost:8000/users/login", {
+      const loginRes = await fetch("https://money-tracker-4q08.onrender.com/users/login", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: new URLSearchParams({ username, password }),

@@ -11,16 +11,19 @@ function Login() {
     e.preventDefault();
 
     try {
-      const res = await fetch("http://localhost:8000/users/login", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/x-www-form-urlencoded",
-        },
-        body: new URLSearchParams({
-          username,
-          password,
-        }),
-      });
+      const res = await fetch(
+        "https://money-tracker-4q08.onrender.com/users/login",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/x-www-form-urlencoded",
+          },
+          body: new URLSearchParams({
+            username,
+            password,
+          }),
+        }
+      );
 
       if (!res.ok) {
         throw new Error("Login failed");

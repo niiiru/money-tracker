@@ -13,7 +13,7 @@ function Tracker() {
     setIsLoggedIn(!!token);
 
     if (token) {
-      fetch("http://localhost:8000/transactions", {
+      fetch("https://money-tracker-4q08.onrender.com/transactions", {
         headers: { Authorization: `Bearer ${token}` },
       })
         .then((res) => res.json())
@@ -33,7 +33,7 @@ function Tracker() {
 
     if (isLoggedIn) {
       const token = localStorage.getItem("token");
-      fetch("http://localhost:8000/transactions", {
+      fetch("https://money-tracker-4q08.onrender.com/transactions", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
